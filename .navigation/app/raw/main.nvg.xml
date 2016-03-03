@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<navigationModel
+  ns = "http://schemas.android.com?import=com.android.tools.idea.editors.navigation.model.*">
+  <locations  
+    class = "java.util.ArrayList">
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.iri16.iri16.MainActivity"/>
+      <point      
+        x = "1548"      
+        y = "48"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.iri16.iri16.acercaDe"/>
+      <point      
+        x = "2732"      
+        y = "512"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.iri16.SegundaPantalla"/>
+      <point      
+        x = "1924"      
+        y = "56"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.iri16.iri16.control"/>
+      <point      
+        x = "172"      
+        y = "192"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.iri16.control"/>
+      <point      
+        x = "1980"      
+        y = "1536"/>
+    </statePointEntry>
+  </locations>
+</navigationModel>

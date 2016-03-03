@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">IRI16</string>
+    <string name="titulo">INTRODUCCIÓN A LA ROBOTICA</string>
+    <string name="title_activity_segunda_pantalla">SegundaPantalla</string>
+</resources>

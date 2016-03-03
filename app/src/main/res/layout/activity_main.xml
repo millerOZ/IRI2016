@@ -132,7 +132,7 @@
         android:ems="10"
         android:id="@+id/dirIP"
         android:textColor="#E7FCEA"
-        android:text="ingrese su IP"
+        android:text="127.0.0.1"
         android:numeric="decimal"
         android:layout_alignBottom="@+id/conexion"
         android:layout_alignParentEnd="true"

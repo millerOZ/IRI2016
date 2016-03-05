@@ -10,33 +10,156 @@
 
     <RelativeLayout
 
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context="com.iri16.iri16.acercaDe"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_content"
+
         android:paddingBottom="@dimen/activity_vertical_margin"
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
 
 
-        >
+        tools:context="com.iri16.iri16.acercaDe">
+
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Medium Text"
-            android:id="@+id/textView"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Medium Text"
-            android:id="@+id/textView2"
+            android:text="CC"
+            android:id="@+id/textViewcc"
             android:layout_alignParentTop="true"
-            android:layout_alignStart="@+id/textView" />
+            android:layout_alignStart="@+id/textViewNombre"
+            android:layout_above="@+id/textViewNombre"
+            android:layout_alignParentLeft="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Nombre"
+            android:id="@+id/textViewNombre"
+            android:layout_alignWithParentIfMissing="true"
+            android:layout_alignTop="@+id/editTextNomb"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/editTextcc"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentRight="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="nombre completo"
+            android:ems="10"
+            android:id="@+id/editTextNomb"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="63dp"
+            android:layout_alignParentTop="false"
+            android:layout_alignParentRight="true"
+            android:layout_alignStart="@+id/editTextcc"
+            android:layout_alignTop="@+id/editTextcc" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Grupo"
+            android:id="@+id/textView"
+            android:layout_alignWithParentIfMissing="true"
+            android:layout_below="@+id/textViewNombre"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="21dp"
+            android:layout_alignParentLeft="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/editTextgru"
+            android:layout_alignTop="@+id/textView"
+            android:layout_alignParentRight="true"
+            android:layout_alignStart="@+id/editTextcc"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="10dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Borrar"
+            android:id="@+id/buttonBorrar"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Modific"
+            android:id="@+id/buttonModificar"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@+id/buttonBorrar" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Consulta"
+            android:id="@+id/buttonConsulta"
+            android:layout_below="@+id/editTextNomb"
+            android:layout_toStartOf="@+id/buttonModificar"
+            android:layout_marginTop="98dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_alignWithParentIfMissing="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Registrar"
+            android:id="@+id/buttonRegistrar"
+            android:layout_alignParentBottom="true"
+            android:layout_toStartOf="@+id/buttonConsulta" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button"
+            android:text="Ant"
+            android:layout_below="@+id/editTextgru"
+            android:layout_toStartOf="@+id/button2" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button2"
+            android:text="Sig"
+            android:layout_below="@+id/editTextgru"
+            android:layout_alignEnd="@+id/buttonConsulta" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button3"
+            android:text="inicio"
+            android:layout_below="@+id/editTextgru"
+            android:layout_alignEnd="@+id/buttonBorrar" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fin"
+            android:id="@+id/button4"
+            android:layout_below="@+id/editTextgru"
+            android:layout_toEndOf="@+id/button3" />
+
     </RelativeLayout>
 </ScrollView>

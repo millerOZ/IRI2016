@@ -26,8 +26,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
 
-
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -35,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         IP = (TextView) findViewById(R.id.ip);
         DirIP = (EditText) findViewById(R.id.dirIP);
         sb1 = (SeekBar) findViewById(R.id.seekBar);
-        acerca = (Button)findViewById(R.id.acercade);
+        acerca = (Button) findViewById(R.id.acercade);
 
         vab1 = (TextView) findViewById(R.id.textViewSeekbar);
 
@@ -46,8 +44,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, com.iri16.iri16.control.class));
             }
         });
-
-
 
 
         conexion.setOnClickListener(new View.OnClickListener() {
@@ -91,13 +87,19 @@ public class MainActivity extends AppCompatActivity {
 
         //efecto sobre el botton acerca de
 
-      acerca.setOnClickListener(new View.OnClickListener() {
-          @Override
-          public void onClick(View view) {
-              Toast.makeText(getApplicationContext(),"Integrandes del grupo IR",Toast.LENGTH_SHORT).show();
+        acerca.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getApplicationContext(), "Integrandes del grupo IR", Toast.LENGTH_SHORT).show();
 
-          }
-      });
+            }
+        });
+        findViewById(R.id.acercade).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, acercaDe.class));
+            }
+        });
 
     }
 

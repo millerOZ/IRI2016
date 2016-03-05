@@ -26,6 +26,11 @@ public class control extends AppCompatActivity {
         musica = (Switch)findViewById(R.id.musica);
 
         final MediaPlayer sound = MediaPlayer.create(control.this, R.raw.audio);
+      //  final MediaPLayer soundFondo = MediaPlayer.create(control.this,R.raw.audio1);
+
+
+
+
 
         up.setOnClickListener(new View.OnClickListener(){
 

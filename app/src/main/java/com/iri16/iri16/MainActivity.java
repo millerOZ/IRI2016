@@ -1,6 +1,7 @@
 package com.iri16.iri16;
 
 import android.content.Intent;
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -16,10 +17,11 @@ public class MainActivity extends AppCompatActivity {
 
 
     private ToggleButton conexion;
-    private TextView IP, vab1;
+    private TextView IP, vab1,vab2;
     private EditText DirIP;
-    private SeekBar sb1;
+    private SeekBar sb1,sb2;
     private Button acerca;
+
 
 
     @Override
@@ -36,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
         acerca = (Button) findViewById(R.id.acercade);
 
         vab1 = (TextView) findViewById(R.id.textViewSeekbar);
+
+        vab2 = (TextView)findViewById(R.id.seekbarVel);
 
 
         findViewById(R.id.buttonVerCard).setOnClickListener(new View.OnClickListener() {
@@ -58,19 +62,22 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        //SeekBar configuracion
+        //SeekBar velocidad
         sb1.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean b) {
 
-                String value = String.valueOf(progress);
+               String value = String.valueOf(progress);
 
-                try {
-                    vab1.setText("seña, 1:" + progress);
+               try {
+                    vab1.setText("Velocidad,1:" + value);
+
                 } catch (Throwable e) {
 
                     e.printStackTrace();
                 }
+
+
 
             }
 
@@ -85,12 +92,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+
         //efecto sobre el botton acerca de
 
         acerca.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "Integrandes del grupo IR", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "fase en desarrollo, ofrecemos disculpas  ", Toast.LENGTH_SHORT).show();
 
             }
         });
@@ -100,6 +109,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, acercaDe.class));
             }
         });
+
+
 
     }
 

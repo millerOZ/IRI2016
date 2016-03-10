@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.sql.SQLException;
+
 public class acercaDe extends AppCompatActivity {
 
     private EditText cc1,nombre1,grupo1;
@@ -61,8 +63,8 @@ public class acercaDe extends AppCompatActivity {
         if(fila.moveToFirst())
         {
             cc1.setText(fila.getString(0));
-            cc1.setText(fila.getString(1));
-            cc1.setText(fila.getString(2));
+            nombre1.setText(fila.getString(1));
+            grupo1.setText(fila.getString(2));
         }else
             Toast.makeText(this,"no existe una persona con dicha cc", Toast.LENGTH_SHORT).show();
         bd.close();
@@ -130,6 +132,7 @@ public class acercaDe extends AppCompatActivity {
 
     public void anterior (View v)
     {
+
         try{
             if(!fila.isFirst())
             {
@@ -179,6 +182,12 @@ public class acercaDe extends AppCompatActivity {
         }else
             Toast.makeText(this,"No hay registros",Toast.LENGTH_SHORT).show();
         bd.close();
+    }
+    public void onReset(View v)
+    {
+        cc1.setText("");
+        nombre1.setText("");
+        grupo1.setText("");
     }
 
 

@@ -108,7 +108,9 @@
                 android:layout_below="@+id/conexion"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentBottom="true"
-                android:layout_toStartOf="@+id/dirIP"
+                android:layout_toStartOf="@+id/ip"
+                android:thumb="@drawable/mario"
+                android:progressDrawable="@drawable/firespirit"
 
                 />
 
@@ -116,7 +118,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="Señal"
+                android:text="Velocidad"
                 android:id="@+id/textViewSeekbar"
                android:layout_alignTop="@+id/seekBar"
                android:layout_alignEnd="@+id/titulo"
@@ -152,6 +154,28 @@
         android:layout_below="@+id/titulo"
         android:text="ip"
         android:layout_toEndOf="@+id/buttonVerCard" />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar2"
+        android:thumb="@drawable/wifi"
+        android:layout_below="@+id/conexion"
+        android:layout_alignStart="@+id/conexion"
+        android:layout_marginTop="25dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignEnd="@+id/buttonVerCard" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Señal"
+        android:id="@+id/seekbarVel"
+        android:layout_alignTop="@+id/seekBar2"
+        android:layout_toStartOf="@+id/textViewSeekbar"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/dirIP" />
 
 
 </RelativeLayout>

@@ -10,17 +10,17 @@
 
     <RelativeLayout
 
-        android:layout_width="fill_parent"
-        android:layout_height="fill_content"
-
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:paddingBottom="@dimen/activity_vertical_margin"
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
 
 
-        tools:context="com.iri16.iri16.acercaDe">
 
+        tools:context="com.iri16.iri16.acercaDe"
+       >
 
         <TextView
             android:layout_width="wrap_content"
@@ -28,10 +28,11 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="CC"
             android:id="@+id/textViewcc"
+
             android:layout_alignParentTop="true"
             android:layout_alignStart="@+id/textViewNombre"
-            android:layout_above="@+id/textViewNombre"
-            android:layout_alignParentLeft="true" />
+            android:layout_alignParentLeft="true"
+            android:layout_alignBottom="@+id/editTextcc" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -39,9 +40,12 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Nombre"
             android:id="@+id/textViewNombre"
+
             android:layout_alignWithParentIfMissing="true"
             android:layout_alignTop="@+id/editTextNomb"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignBottom="@+id/editTextNomb" />
 
         <EditText
             android:layout_width="wrap_content"
@@ -49,6 +53,7 @@
             android:inputType="number"
             android:ems="10"
             android:id="@+id/editTextcc"
+            android:textColor="#ffffff"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_alignParentTop="true"
@@ -59,9 +64,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
-            android:text="nombre completo"
             android:ems="10"
             android:id="@+id/editTextNomb"
+            android:textColor="#ffffff"
             android:layout_marginRight="20dp"
             android:layout_marginTop="63dp"
             android:layout_alignParentTop="false"
@@ -75,11 +80,13 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Grupo"
             android:id="@+id/textView"
+
             android:layout_alignWithParentIfMissing="true"
             android:layout_below="@+id/textViewNombre"
             android:layout_alignParentStart="true"
             android:layout_marginTop="21dp"
-            android:layout_alignParentLeft="true" />
+            android:layout_alignParentLeft="true"
+            android:layout_alignEnd="@+id/button3" />
 
         <EditText
             android:layout_width="wrap_content"
@@ -87,54 +94,61 @@
             android:inputType="number"
             android:ems="10"
             android:id="@+id/editTextgru"
+            android:textColor="#ffffff"
             android:layout_alignTop="@+id/textView"
             android:layout_alignParentRight="true"
-            android:layout_alignStart="@+id/editTextcc"
             android:layout_marginRight="20dp"
-            android:layout_marginLeft="10dp" />
+            android:layout_marginLeft="10dp"
+            android:layout_alignStart="@+id/editTextNomb" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Borrar"
+            android:text="Delete"
             android:id="@+id/buttonBorrar"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentStart="true" />
+            android:onClick="borrar"
+            android:layout_alignBaseline="@+id/buttonRegistrar"
+            android:layout_alignBottom="@+id/buttonRegistrar"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Modific"
+            android:text="Modificar"
             android:id="@+id/buttonModificar"
-            android:layout_alignParentBottom="true"
-            android:layout_toEndOf="@+id/buttonBorrar" />
+            android:onClick="modificacion"
+            android:layout_alignTop="@+id/ButtonReset"
+            android:layout_toEndOf="@+id/ButtonReset" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Consulta"
+            android:text="Buscar"
             android:id="@+id/buttonConsulta"
-            android:layout_below="@+id/editTextNomb"
-            android:layout_toStartOf="@+id/buttonModificar"
-            android:layout_marginTop="98dp"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_alignWithParentIfMissing="true" />
+            android:layout_alignWithParentIfMissing="true"
+            android:onClick="consulta"
+            android:layout_alignTop="@+id/buttonRegistrar"
+            android:layout_alignParentEnd="true" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Registrar"
             android:id="@+id/buttonRegistrar"
-            android:layout_alignParentBottom="true"
-            android:layout_toStartOf="@+id/buttonConsulta" />
+            android:onClick="registrar"
+            android:layout_marginTop="31dp"
+            android:layout_below="@+id/buttonModificar"
+            android:layout_toEndOf="@+id/buttonBorrar" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/button"
             android:text="Ant"
-            android:layout_below="@+id/editTextgru"
+            android:onClick="anterior"
+            android:layout_marginLeft="5dp"
+            android:layout_alignTop="@+id/button4"
             android:layout_toStartOf="@+id/button2" />
 
         <Button
@@ -142,24 +156,52 @@
             android:layout_height="wrap_content"
             android:id="@+id/button2"
             android:text="Sig"
+            android:onClick="siguiente"
+            android:layout_alignTop="@+id/button"
+            android:layout_alignEnd="@+id/buttonConsulta"
             android:layout_below="@+id/editTextgru"
-            android:layout_alignEnd="@+id/buttonConsulta" />
+            android:layout_alignParentRight="true" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/button3"
-            android:text="inicio"
+            android:text="Inicio"
+            android:onClick="inicio"
             android:layout_below="@+id/editTextgru"
-            android:layout_alignEnd="@+id/buttonBorrar" />
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="22dp"
+            android:layout_alignParentLeft="true" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Fin"
             android:id="@+id/button4"
-            android:layout_below="@+id/editTextgru"
-            android:layout_toEndOf="@+id/button3" />
+            android:onClick="fin"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_alignTop="@+id/button3"
+            android:layout_toEndOf="@+id/ButtonReset" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reset"
+            android:id="@+id/ButtonReset"
+            android:onClick="onReset"
+            android:layout_marginTop="32dp"
+            android:layout_below="@+id/button3"
+            android:layout_toStartOf="@+id/buttonRegistrar" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Listar"
+            android:id="@+id/button5"
+            android:layout_alignBottom="@+id/buttonModificar"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true" />
 
     </RelativeLayout>
 </ScrollView>

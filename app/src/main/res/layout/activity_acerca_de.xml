@@ -198,10 +198,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Listar"
-            android:id="@+id/button5"
+            android:id="@+id/buttonListar"
             android:layout_alignBottom="@+id/buttonModificar"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true" />
+            android:layout_alignParentRight="true"
+            android:onClick="listar" />
 
     </RelativeLayout>
 </ScrollView>

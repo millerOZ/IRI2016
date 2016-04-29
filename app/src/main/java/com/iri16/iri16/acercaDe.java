@@ -158,6 +158,7 @@ public class acercaDe extends AppCompatActivity {
                 cc1.setText(fila.getString(0));
                 nombre1.setText(fila.getString(1));
                 grupo1.setText(fila.getString(2));
+
             }else
                 Toast.makeText(this," Llego al ultimo registro",Toast.LENGTH_SHORT).show();
         }catch(Exception e)
@@ -182,6 +183,25 @@ public class acercaDe extends AppCompatActivity {
         }else
             Toast.makeText(this,"No hay registros",Toast.LENGTH_SHORT).show();
         bd.close();
+    }
+    public void listar(View v)
+    {
+        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this,"administracion",null,1);
+        SQLiteDatabase bd= admin.getWritableDatabase();
+
+        Cursor fila = bd.rawQuery("select * from integrantes order by cc asc",null);
+
+        if(fila.moveToFirst())
+        {
+            while(fila.moveToNext())
+            {
+                cc1.setText(fila.getString(0));
+                nombre1.setText(fila.getString(1));
+                grupo1.setText(fila.getString(2));
+            }
+                Toast.makeText(this," ", Toast.LENGTH_SHORT).show();
+            bd.close();
+        }
     }
     public void onReset(View v)
     {

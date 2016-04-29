@@ -88,6 +88,8 @@
                 android:layout_height="wrap_content"
                 android:text="New ToggleButton"
                 android:id="@+id/conexion"
+
+
                 android:layout_marginTop="26dp"
                 android:layout_marginLeft="20dp"
                 android:checked="false"
@@ -102,7 +104,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/seekBar"
-                android:layout_marginTop="37dp"
+                android:layout_marginTop="350dp"
                 android:indeterminate="false"
                 android:layout_alignStart="@+id/conexion"
                 android:layout_below="@+id/conexion"
@@ -133,8 +135,9 @@
         android:inputType="phone"
         android:ems="10"
         android:id="@+id/dirIP"
-        android:textColor="#E7FCEA"
-        android:text="127.0.0.1"
+        android:textColor="#ffffff"
+        android:textColorHint="#a69e9e"
+        android:hint="ej:127.0.0.1"
         android:numeric="decimal"
         android:layout_alignBottom="@+id/conexion"
         android:layout_alignParentEnd="true"
@@ -142,7 +145,10 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="false"
         android:layout_alignParentRight="true"
-        />
+        android:selectAllOnFocus="true"
+        android:focusableInTouchMode="true">
+      <requestFocus />
+    </EditText>
 
     <EditText
         android:layout_width="wrap_content"
@@ -153,7 +159,9 @@
         android:textColor="#ffffff"
         android:layout_below="@+id/titulo"
         android:text="ip"
-        android:layout_toEndOf="@+id/buttonVerCard" />
+        android:layout_toEndOf="@+id/buttonVerCard"
+        android:layout_alignParentStart="false"
+        android:hint="ip" />
 
     <SeekBar
         android:layout_width="wrap_content"
@@ -161,21 +169,103 @@
         android:id="@+id/seekBar2"
         android:thumb="@drawable/wifi"
         android:layout_below="@+id/conexion"
+        android:progressDrawable="@drawable/seekbar"
         android:layout_alignStart="@+id/conexion"
         android:layout_marginTop="25dp"
         android:layout_alignParentLeft="true"
-        android:layout_alignEnd="@+id/buttonVerCard" />
+        android:indeterminate="false"
+        android:layout_toStartOf="@+id/Textseekbar2"
+        android:layout_marginRight="20dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Señal"
-        android:id="@+id/seekbarVel"
+        android:id="@+id/Textseekbar2"
+        android:textColor="#ffffff"
         android:layout_alignTop="@+id/seekBar2"
-        android:layout_toStartOf="@+id/textViewSeekbar"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/dirIP" />
+        android:layout_alignStart="@+id/Textseekbar3"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentRight="true" />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar3"
+        android:thumb="@drawable/crash"
+        android:layout_alignStart="@+id/conexion"
+        android:layout_alignParentLeft="true"
+        android:layout_alignEnd="@+id/buttonVerCard"
+        android:layout_below="@+id/seekBar2"
+        android:layout_marginTop="30dp"
+        android:indeterminate="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Señal"
+        android:id="@+id/Textseekbar3"
+        android:textColor="#ffffff"
+        android:layout_alignTop="@+id/seekBar3"
+        android:layout_alignStart="@+id/Textseekbar4"
+        android:layout_alignParentRight="true" />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar4"
+        android:thumb="@drawable/tails"
+        android:layout_below="@+id/seekBar3"
+        android:layout_alignParentStart="true"
+        android:indeterminate="false"
+        android:layout_alignEnd="@+id/buttonVerCard"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Señal"
+        android:id="@+id/Textseekbar4"
+        android:textColor="#ffffff"
+        android:layout_alignTop="@+id/seekBar4"
+        android:layout_alignStart="@+id/textViewSeekbar"
+        android:layout_alignParentRight="true" />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar5"
+        android:thumb="@drawable/wifi"
+        android:layout_alignTop="@+id/Textseekbar5"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/buttonVerCard"
+        android:indeterminate="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Señal"
+        android:id="@+id/Textseekbar5"
+        android:textColor="#ffffff"
+        android:layout_below="@+id/seekBar4"
+        android:layout_alignStart="@+id/Textseekbar4"
+        android:layout_alignParentRight="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/textview7"
+        android:textColor="#ffffff"
+        android:textColorHint="#a69e9e"
+        android:layout_above="@+id/conexion"
+        android:layout_alignEnd="@+id/titulo"
+        android:hint="Estado conexion " />
 
 
 </RelativeLayout>
